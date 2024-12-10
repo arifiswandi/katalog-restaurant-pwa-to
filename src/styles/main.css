@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f4d9d0;
+  padding-top: 70px;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button,
+input,
+textarea,
+a {
+  min-width: 45px;
+  min-height: 45px;
+}
+
+.skip-link {
+  font-size: 2em;
+  position: fixed;
+  top: -100px;
+  left: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 0 10px;
+  margin: auto;
+  border-radius: 10px;
+  text-transform: capitalize;
+  text-decoration: none;
+  opacity: 50%;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 90px;
+}
+
+.non-decoration {
+  text-decoration: none;
+}
+
+.label {
+  margin: 5px auto;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  color: #690505;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.header-bar {
+  padding: 5px 10px;
+  background-color: #c75b7a;
+  display: grid;
+  grid-template-columns: 2fr auto;
+  gap: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header-bar .header-bar-menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 3.5em;
+  cursor: pointer;
+  margin: auto;
+  color: #eee7e7;
+}
+
+.header-bar .header-bar-brand {
+  display: grid;
+  grid-template-columns: 55px auto;
+  gap: 5px;
+  margin: auto 0;
+}
+
+.header-bar .header-bar-brand .brand {
+  height: 100%;
+  margin: auto;
+}
+
+.header-bar .header-bar-brand h1 {
+  color: #eee7e7;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+  margin: auto 0;
+}
+
+.header-bar .header-bar-nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(243, 238, 238);
+  width: 100%;
+  margin: 2px;
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.header-bar .header-bar-nav ul li:hover {
+  background-color: #eb7c21;
+}
+
+.hero {
+  text-align: center;
+  min-height: 320px;
+  background-image: url('../public/images/heros/resize/hero-image_2-small.jpg');
+  background-position: center;
+}
+
+.hero-content {
+  padding: 250px 0 0 0;
+}
+
+.hero-content h1 {
+  color: #fff;
+  margin: auto;
+  font-weight: 800;
+  font-size: 2.2em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+main {
+  display: block;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.restaurant-list {
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.restaurant-detail {
+  margin: 0 auto 20px auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+.box {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box-img {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  transition: all none;
+  transition: all 0.3s ease-in-out;
+}
+
+.box-img .pic {
+  min-width: 100%;
+  background-size: cover;
+  object-fit: fill;
+  object-position: center;
+}
+
+.h-225 {
+  height: 225px;
+}
+
+.h-500 {
+  height: 500px;
+}
+
+.box-img .top-left {
+  position: absolute;
+  left: 0;
+  color: #efefef;
+  border-radius: 5px 0 5px 0;
+  padding: 5px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.box-img .top-right {
+  position: absolute;
+  right: 0;
+  color: #efefef;
+  border-radius: 0 5px 0 5px;
+  padding: 5px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.box-img .bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #efefef;
+  padding: 5px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.box-content-name {
+  margin: 10px 0;
+}
+
+.box-content-description {
+  text-align: justify;
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: rgb(24, 21, 21);
+}
+
+.categories {
+  display: grid;
+  justify-content: center;
+}
+
+.categories .name {
+  display: inline-block;
+  min-width: 55px;
+  min-height: 55px;
+  font-size: 2em;
+  line-height: 1em;
+  margin: 0 auto;
+  padding: 10px;
+  border: 3px solid gold;
+  border-radius: 10px;
+}
+
+.gold {
+  border: 2px solid gold;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box:focus {
+  background: #c0bcbc !important;
+  color: blue !important;
+}
+
+.menu-foods-drinks {
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 50px;
+}
+
+.restaurant-review {
+  width: 100%;
+  margin: 5px auto;
+}
+
+.restaurant-review-fist-row {
+  min-height: 45px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: coral;
+  border: 1px solid goldenrod;
+  border-radius: 10px 10px 0 0;
+  margin-top: 5px;
+  font-size: 1.8em;
+}
+
+.restaurant-review-fist-row-date {
+  padding: 10px;
+  text-align: end;
+}
+
+.restaurant-review-fist-row-name {
+  padding: 10px;
+  text-align: left;
+}
+
+.restaurant-review-second-row {
+  min-height: 45px;
+  padding: 10px;
+  background-color: aliceblue;
+  border: 1px solid goldenrod;
+  border-radius: 0 0 10px 10px;
+  font-size: 1.3em;
+}
+
+.form-reviewer {
+  display: grid;
+  gap: 5px;
+}
+
+.form-reviewer label {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+.form-reviewer input {
+  padding: 5px 10px;
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+.form-reviewer .button {
+  width: 100%;
+  background-color: red;
+}
+
+.form-reviewer .submit {
+  font-size: 1.3em;
+  text-transform: capitalize;
+  min-height: 45px;
+  min-width: 80px;
+  margin: 10px 0 10px auto;
+  background-color: rgb(27, 235, 20);
+  color: rgb(32, 33, 34);
+  border-radius: 10px;
+}
+
+.form-reviewer .submit:hover {
+  margin: 10px 0 10px auto;
+  background-color: gold;
+  border-color: goldenrod;
+  color: rgb(32, 33, 34);
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: inherit;
+  border: 0;
+
+  font-size: 45px;
+  color: red;
+  cursor: pointer;
+}
+
+.search {
+  display: grid;
+  width: 100%;
+}
+
+.search .query {
+  width: 80%;
+  height: 55px;
+  font-size: 1.5em;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid gold;
+}
+
+.restaurant-item-not-found {
+  position: absolute;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  color: red;
+}
+
+.footer {
+  height: 70px;
+  width: 100%;
+  box-shadow: 0px 1px 1px 1px black;
+  background-color: #c75b7a;
+}

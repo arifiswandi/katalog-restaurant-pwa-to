@@ -1,0 +1,119 @@
+@media screen and (max-width: 650px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .header-bar .header-bar-nav {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    padding: 0;
+    z-index: 10;
+    background-color: #921a40;
+    width: 250px;
+    height: 100%;
+    transform: translate(-300px, 0);
+    transition: transform 0.3s ease;
+  }
+
+  .header-bar .header-bar-nav.open {
+    transform: translate(0, 0);
+  }
+
+  .header-bar .header-bar-nav ul li {
+    padding: 0 10px;
+    border-bottom: 2px solid #fff;
+  }
+
+  .bottom h3 {
+    font-size: .6em;
+  }
+
+  .restaurant-detail {
+    padding: 10px;
+    width: 90%;
+  }
+
+  .restaurant-detail-review {
+    width: 100%;
+    margin: 5px auto;
+  }
+
+  .restaurant-review-fist-row {
+    font-size: 1.2em;
+  }
+
+  .restaurant-review-second-row {
+    font-size: 1em;
+  }
+
+  .h-500 {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+
+  .header-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+
+  .header-bar .header-bar-brand h1 {
+    font-size: 1.5em;
+  }
+
+  .header-bar .header-bar-menu {
+    display: none;
+  }
+
+  .header-bar .header-bar-nav ul li:hover {
+    border-radius: 5px;
+  }
+
+  .header-bar .header-bar-nav ul li {
+    display: inline-block;
+  }
+
+  .header-bar .header-bar-nav ul li a {
+    width: 120px;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .restaurant-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .hero {
+    background-image: url('../public/images/heros/hero-image_2.jpg');
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .restaurant-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  hero-component {
+    min-width: 1000px;
+  }
+
+  .restaurant-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .restaurant-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
