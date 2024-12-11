@@ -94,8 +94,8 @@ module.exports = {
       ],
     }),
     new BundleAnalyzerPlugin({
-      analyzerMode: 'server',
-      openAnalyzer: true,
+      analyzerMode: 'static',
+      openAnalyzer: false,
     }),
     new ImageminWebpackPlugin({
       plugins: [
