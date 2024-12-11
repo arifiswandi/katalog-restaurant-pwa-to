@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMiniExtractPlugin = require('mini-css-extract-plugin');
@@ -8,6 +9,11 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+
+// Import environment variables
+require('dotenv').config({
+  path: path.resolve('.env'),
+});
 
 module.exports = {
   entry: {
@@ -72,6 +78,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env),
+    }),
     new CssMiniExtractPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
