@@ -1,4 +1,5 @@
 const CONFIG = {
+  // eslint-disable-next-line no-undef
   KEY: process.env.API_KEY_TMDB,
   BASE_URL: 'https://restaurant-api.dicoding.dev/',
   BASE_IMAGE_URL: 'https://restaurant-api.dicoding.dev/images/small/',
